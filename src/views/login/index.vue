@@ -5,7 +5,10 @@
              class="card-box login-form">
       <h3 class="title">系统登录</h3>
       <el-form-item prop="email">
-        <span class="svg-container"><wscn-icon-svg icon-class="jiedianyoujian"/></span>
+
+        <span class="svg-container"><i class="iconfont icon-touxiang"></i>
+          <!--<wscn-icon-svg icon-class="jiedianyoujian"/>-->
+        </span>
         <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="用户名"></el-input>
       </el-form-item>
       <el-form-item prop="password">
@@ -18,8 +21,8 @@
           登录
         </el-button>
       </el-form-item>
-      <div class='tips'>admin账号为:admin 密码:admin</div>
-      <div class='tips'>editor账号:editor@wallstreetcn.com 密码随便填</div>
+      <div class='tips'>admin账号为：admin 密码：admin</div>
+      <div class='tips'>user账号：user 密码：123456</div>
       <router-link to="/sendpwd" class="forget-pwd">
         忘记密码?(或首次登录)
       </router-link>

@@ -2,10 +2,16 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+
+function resolveApp(relativePath) {
+  return path.resolve(relativePath);
+}
+
 
 module.exports = {
   entry: {
@@ -66,5 +72,11 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      favicon: resolveApp('favicon.ico')
+    })
+
+  ]
 }

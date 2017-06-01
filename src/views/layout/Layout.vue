@@ -1,12 +1,12 @@
 <template>
   <div class="app-wrapper" :class="{hideSidebar:!sidebar.opened}">
+        <Navbar/>
         <div class="sidebar-wrapper">
             <Sidebar class="sidebar-container"/>
         </div>
-        <!--<div class="main-container">-->
-            <!--<Navbar/>-->
-            <!--<App-main/>-->
-        <!--</div>-->
+        <div class="main-container">
+            <App-main/>
+        </div>
     </div>
 </template>
 
@@ -16,9 +16,9 @@
     export default {
       name: 'layout',
       components: {
-//        Navbar,
+        Navbar,
         Sidebar,
-//        AppMain
+        AppMain
       },
       computed: {
         sidebar() {
@@ -55,7 +55,7 @@
         .sidebar-wrapper {
             width: 180px;
             position: fixed;
-            top: 0;
+            top: 60px;
             bottom: 0;
             left: 0;
             z-index: 1001;

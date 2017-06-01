@@ -1,12 +1,13 @@
+import store from 'store';
+
 const permission = {
   state: {
     permissionRoutes: []
   },
   init(data) {
-    console.log("遍历sider bar")
     const { roles, router } = data;
     const permissionRoutes = router.filter(v => {
-      if (roles.indexOf('admin') >= 0) return true;
+      if (roles.indexOf('ROLE_ADMIN') >= 0) return true;
       if (this.hasPermission(roles, v)) {
         if (v.children && v.children.length > 0) {
           v.children = v.children.filter(child => {
@@ -33,6 +34,11 @@ const permission = {
     } else {
       return true
     }
+  },
+  hasAuthority(permitRoles){
+    return store.getters.roles.some(role => permitRoles.indexOf(role) >= 0)
+    // console.log("用户权限")
+    // console.log(store.getters.roles)
   }
 };
 

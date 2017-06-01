@@ -71,8 +71,8 @@ const user = {
             console.log("登录接口返回信息")
             console.log(response)
             const data = response.data;
-            // Cookies.set('X-Ivanka-Token', response.data.token);
-            // commit('SET_TOKEN', data.token);
+            Cookies.set('X-Ivanka-Token',  'Bearer ' + data.access_token);
+            commit('SET_TOKEN', 'Bearer ' + data.access_token);
             // commit('SET_EMAIL', email);
             resolve();
           }).catch(error => {
@@ -85,13 +85,17 @@ const user = {
     // 获取用户信息
     GetInfo({commit, state}) {
       return new Promise((resolve, reject) => {
+        // console.log("token")
+        // console.log(state.token)
         getInfo(state.token).then(response => {
+          console.log("action 获取用户信息")
+          console.log(response)
           const data = response.data;
-          commit('SET_ROLES', data.role);
-          commit('SET_NAME', data.name);
-          commit('SET_AVATAR', data.avatar);
-          commit('SET_UID', data.uid);
-          commit('SET_INTRODUCTION', data.introduction);
+          commit('SET_ROLES', data.authorities);
+          commit('SET_NAME', data.login);
+          // commit('SET_AVATAR', data.avatar);
+          // commit('SET_UID', data.uid);
+          // commit('SET_INTRODUCTION', data.introduction);
           resolve(response);
         }).catch(error => {
           reject(error);
@@ -118,6 +122,7 @@ const user = {
     LogOut({commit, state}) {
       return new Promise((resolve, reject) => {
         logout(state.token).then(() => {
+          console.log("登出")
           commit('SET_TOKEN', '');
           commit('SET_ROLES', []);
           Cookies.remove('X-Ivanka-Token');
