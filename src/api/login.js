@@ -26,13 +26,6 @@ export function loginByEmail(username, password) {
   })
 }
 
-export function logout() {
-  return fetch({
-    url: '/login/logout',
-    method: 'post'
-  });
-}
-
 export function getInfo(token) {
   return fetch({
     url: '/uaa/api/account',

@@ -1,5 +1,5 @@
 <template>
-	<div class="pagination-container">
+	<div class="pagination-container" >
 		<el-pagination
 		@size-change="handleSizeChange"
 		@current-change="handleCurrentChange"

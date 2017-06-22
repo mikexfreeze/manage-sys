@@ -1,4 +1,5 @@
 import store from 'store';
+import Vue from 'vue'
 
 const permission = {
   state: {
@@ -23,6 +24,8 @@ const permission = {
       }
       return false;
     });
+    // console.log("permissionRoutes")
+    // console.log(permissionRoutes)
     this.state.permissionRoutes = permissionRoutes;
   },
   get() {
@@ -43,3 +46,6 @@ const permission = {
 };
 
 export default permission;
+
+//全局绑定
+Vue.prototype.hasAuthority = permission.hasAuthority

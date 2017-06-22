@@ -89,7 +89,7 @@
       dataPages
     },
     created(){
-      console.log(this.hasAuthority("ROLE_ADMIN"));
+//      console.log(this.hasAuthority("ROLE_ADMIN"));
     },
     methods: {
       hasAuthority:permission.hasAuthority,

@@ -2,10 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import 'normalize.css/normalize.css';// normalize.css 样式格式化
 import 'element-ui/lib/theme-default/index.css' //element默认样式
-import 'styles/index.scss'; // 全局自定义的css样式
-import 'styles/commen.css';
+import 'assets/styles/index.scss'; // 全局自定义的css样式
+import 'assets/styles/commen.css';
 import 'assets/iconfont/iconfont'; // iconfont
 import 'components/Icon-svg/index'; // 封装的svg组件
+import './directives'; // 自定义指令
+import 'components'; // 自定义全局组件
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -15,10 +17,16 @@ import App from './App'
 import router from './router';
 import store from './store';
 import permission from 'store/permission';
+import * as filters from './filters'; // 全局vue filter
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 
-const whiteList = ['/login', '/authredirect', '/reset', '/sendpwd'];// 不重定向白名单
+// register global utility filters.
+Object.keys(filters).forEach(key => {
+    Vue.filter(key, filters[key])
+});
+
+const whiteList = ['/login', '/authredirect', '/reset', '/sendpwd','/register'];// 不重定向白名单
 router.beforeEach((to, from, next) => {
   // console.log("循环计数")
   if (store.getters.token) { // 判断是否有token
@@ -36,7 +44,6 @@ router.beforeEach((to, from, next) => {
           next() //不需要权限
         }
       },function () {
-        console.log("1")
         store.dispatch('FedLogOut').then(() => {
           next({ path: '/login' })
         });
@@ -55,6 +62,8 @@ router.beforeEach((to, from, next) => {
   }
 
 });
+
+
 
 // permissiom judge
 function hasPermission(roles, permissionRoles) {
@@ -95,3 +104,6 @@ const app = new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+//刷新浏览器时重新定向到首页
+// router.push({path:'/'})

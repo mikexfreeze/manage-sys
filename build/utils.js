@@ -44,16 +44,19 @@ exports.cssLoaders = function (options) {
     }
   }
 
-  // https://vue-loader.vuejs.org/en/configurations/extract-css.html
-  return {
-    css: generateLoaders(),
-    postcss: generateLoaders(),
-    less: generateLoaders('less'),
-    sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
-    stylus: generateLoaders('stylus'),
-    styl: generateLoaders('stylus')
+  var load = {
+      css: generateLoaders(),
+      postcss: generateLoaders(),
+      less: generateLoaders('less'),
+      sass: generateLoaders('sass', { indentedSyntax: true }),
+      scss: generateLoaders('sass'),
+      stylus: generateLoaders('stylus'),
+      styl: generateLoaders('stylus'),
   }
+  // console.log("css load")
+  // console.log(load)
+  // https://vue-loader.vuejs.org/en/configurations/extract-css.html
+  return load
 }
 
 // Generate loaders for standalone style files (outside of .vue)

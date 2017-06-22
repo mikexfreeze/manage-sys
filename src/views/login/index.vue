@@ -21,6 +21,15 @@
           登录
         </el-button>
       </el-form-item>
+      <el-form-item>
+        <router-link to="/register">
+          <el-button type="primary" style="width:100%;">
+            新用户注册
+          </el-button>
+        </router-link>
+
+      </el-form-item>
+
       <div class='tips'>admin账号为：admin 密码：admin</div>
       <div class='tips'>user账号：user 密码：123456</div>
       <router-link to="/sendpwd" class="forget-pwd">
@@ -131,12 +140,13 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss">
-  @import "src/styles/mixin.scss";
+  @import "src/assets/styles/mixin.scss";
 
   .tips {
     font-size: 14px;
     color: #fff;
     margin-bottom: 5px;
+    margin-top: 15px;
   }
 
   .login-container {

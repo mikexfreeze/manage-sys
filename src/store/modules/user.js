@@ -121,15 +121,12 @@ const user = {
     // 登出
     LogOut({commit, state}) {
       return new Promise((resolve, reject) => {
-        logout(state.token).then(() => {
           console.log("登出")
           commit('SET_TOKEN', '');
           commit('SET_ROLES', []);
           Cookies.remove('X-Ivanka-Token');
           resolve();
-        }).catch(error => {
-          reject(error);
-        });
+
       });
     },
 
