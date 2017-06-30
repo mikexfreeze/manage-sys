@@ -1,7 +1,5 @@
 <template>
     <div>
-
-
         <el-table
                 :data="tableData"
                 border
@@ -26,17 +24,17 @@
                     label="描述"
                     width="180">
             </el-table-column>
-            <el-table-column
-                    prop="模型"
-                    label="module">
-            </el-table-column>
+            <!--<el-table-column-->
+                    <!--prop="module"-->
+                    <!--label="模型">-->
+            <!--</el-table-column>-->
             <el-table-column
                     prop="status"
                     label="状态">
             </el-table-column>
             <el-table-column align="center" label="操作" width="150" v-if="hasAuthority('ROLE_ADMIN')">
                 <template scope="scope">
-                    <el-button size="small" type="danger"
+                    <el-button size="small" type="primary"
                                @click="handlePermit(scope.row)"
                     >授权
                     </el-button>

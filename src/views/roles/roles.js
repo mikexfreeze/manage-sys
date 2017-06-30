@@ -1,7 +1,7 @@
 /**
  * Created by Micheal Xiao on 2017/6/19.
  */
-import {GetRolesList,CreateRole,DeleteRole} from 'api/roles'
+import {GetRolesList,CreateRole,DeleteRole,UpdateRole} from 'api/roles'
 import dataTable from './components/rolesTable.vue'
 import { Message } from 'element-ui';
 
@@ -21,7 +21,8 @@ export default {
                 size:15
             },
             textMap: {
-              create: '创建'
+              create: '创建',
+              update: '编辑',
             },
             dialogStatus:'create',
             dialogFormVisible: false,
@@ -29,7 +30,7 @@ export default {
             temp: {
              // id: '',
              status: '',
-             comment: '',
+             description: '',
              name: '',
              // authorities: [''],
             },
@@ -45,6 +46,14 @@ export default {
               this.dialogStatus = 'create';
               this.getList(this.pageParam)
             })
+        },
+        update(){
+          console.log("编辑接口");
+          UpdateRole(this.temp)
+            .then(() => {
+              this.dialogFormVisible = false;
+              this.getList(this.pageParam);
+            });
         },
         handleSelectionChange(selection){
             selectionData = selection
@@ -90,6 +99,20 @@ export default {
               message: '已取消删除'
             });
           });
+        },
+        onEdit(){
+          // 判断是否选中记录
+          if(selectionData.length > 1 ||selectionData.length == 0){
+            Message({
+              message: "请选择一行数据",
+              type: 'error',
+              duration: 5 * 1000
+            })
+            return
+          };
+          $.extend(this.temp, selectionData[0])
+          this.dialogStatus = 'update';
+          this.dialogFormVisible = true;
         }
     },
     created(){

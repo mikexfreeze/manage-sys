@@ -59,21 +59,21 @@ img.absent {
  *  Anchor Related Formatting
  **********************************/
 
-a {
-    color: #4183C4;
-}
+/*a {*/
+    /*color: #4183C4;*/
+/*}*/
 
-a.mail-link {
-    color:  #aa33bb;
-}
+/*a.mail-link {*/
+    /*color:  #aa33bb;*/
+/*}*/
 
-a.absent {
-    color: #B00020;
-}
+/*a.absent {*/
+    /*color: #B00020;*/
+/*}*/
 
-a.local-only {
-    color: #be8000;
-}
+/*a.local-only {*/
+    /*color: #be8000;*/
+/*}*/
 
 /**********************************
  *  Header Related Formatting
