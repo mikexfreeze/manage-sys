@@ -4,11 +4,11 @@
 
 import moment from 'moment'
 
-import dataTable from 'components/table/table.vue'
+import dataTable from './components/table/table.vue'
 import store from 'store'
 import {GetList, CreatActive, UpdateActive, DeleteActive} from 'api/activities'
 import { Message } from 'element-ui';
-import editor from './editor.vue';
+import editor from './components/editor.vue';
 
 const activeTypeOptions = [
     { key: 'FD', display_name: '技术分享' },

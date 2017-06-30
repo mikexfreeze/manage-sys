@@ -20,6 +20,8 @@ const dashboard = resolve => require(['../views/dashboard/index.vue'], resolve);
 const Err404 = resolve => require(['../views/error/404'], resolve);
 const Err401 = resolve => require(['../views/error/401'], resolve);
 
+
+
 import customRoute from './customRoute'
 
 export default new Router({
@@ -38,7 +40,7 @@ export default new Router({
             name: '首页',
             hidden: true,
             children: [{path: 'dashboard', component: dashboard}]
-        },
+        }
 
 
 

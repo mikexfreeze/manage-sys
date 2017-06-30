@@ -22,13 +22,48 @@ export function GetRolesList(page) {
     })
 }
 
-export function DeleteUsers(login) {
+export function GetRole(roleId) {
     return fetch({
-        url: process.env.BASE_API + '/uaa/api/users/'+ login,
-        method: 'delete',
+        url: process.env.BASE_API + '/uaa/api/roles/' + roleId,
+        method: 'get',
     }).then(function (result) {
-        console.log("删除用户信息接口 返回信息")
+        console.log("get role API")
         console.log(result)
         return result
     })
+}
+
+export function SetRoleAuthorities(roleId, data) {
+    return fetch({
+        url: process.env.BASE_API + '/uaa/api/roleAuthority/' + roleId,
+        method: 'put',
+        data:data
+    }).then(function (result) {
+        console.log("put role authorities API")
+        console.log(result)
+        return result
+    })
+}
+// 创建角色
+export function CreateRole(data) {
+  return fetch({
+    url: process.env.BASE_API + '/uaa/api/roles',
+    method: 'post',
+    data:data
+  }).then(function (result) {
+    console.log("create role API")
+    console.log(result)
+    return result
+  })
+}
+// 删除角色 根据ID
+export function DeleteRole(id) {
+  return fetch({
+    url: process.env.BASE_API + '/uaa/api/roles/' + id,
+    method: 'delete',
+  }).then(function (result) {
+    console.log("delete role API")
+    console.log(result)
+    return result
+  })
 }

@@ -22,13 +22,14 @@ export function GetAuthoritiesList(page) {
     })
 }
 
-export function DeleteUsers(login) {
-    return fetch({
-        url: process.env.BASE_API + '/uaa/api/users/'+ login,
-        method: 'delete',
-    }).then(function (result) {
-        console.log("删除用户信息接口 返回信息")
-        console.log(result)
-        return result
-    })
+export function ImplementAuthorities(data) {
+  return fetch({
+    url: process.env.BASE_API + '/uaa/api/authorities',
+    method: 'post',
+    data: data
+  }).then(function (result) {
+    console.log("创建权限 返回信息")
+    console.log(result)
+    return result
+  })
 }

@@ -36,17 +36,21 @@ const Permission = resolve => require(['../views/permission/permission.vue'], re
 const Roles = resolve => require(['../views/roles/roles.vue'], resolve);
 
 
+//说明文档
+const helpDocument = resolve => require(['../views/help-document/readme.vue'], resolve);
+
+
 export default [
 
     {
-        path: '/permission-test',
-        component: Layout,
-        redirect: '/permission-test/index',
-        name: '权限测试',
+        path: '/permission-test',//路径
+        component: Layout,//layout模板组件
+        redirect: '/permission-test/index',//重新定向到子路由
+        name: '权限测试',//路由名称
         icon: 'quanxian',
         meta: {role: ['ROLE_ADMIN']}, //页面需要的权限
         // noDropdown: true,
-        children: [
+        children: [//子路由
             {
                 path: 'index',
                 component: PermissionTest,
@@ -125,5 +129,17 @@ export default [
             {path: 'permission', component: Permission, name: '权限管理'},
             {path: 'roles', component: Roles, name: '角色管理'}
         ]
-    },
+    },{
+        path: '/help',//路径
+        component: Layout,//layout模板组件
+        redirect: '/help/readme',//重新定向到子路由
+        name: '帮助文档',//路由名称
+        icon: 'wendang',
+        children: [//子路由
+            {
+                path: 'readme',
+                component: helpDocument,
+                name: '使用教程',
+            }]
+    }
 ]

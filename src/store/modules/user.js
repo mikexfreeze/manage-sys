@@ -75,9 +75,7 @@ const user = {
             commit('SET_TOKEN', 'Bearer ' + data.access_token);
             // commit('SET_EMAIL', email);
             resolve();
-          }).catch(error => {
-          reject(error);
-        });
+          });
       });
     },
 
