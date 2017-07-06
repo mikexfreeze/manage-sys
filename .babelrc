@@ -1,9 +1,9 @@
 {
   "presets": [
     ["env", { "modules": false }],
-    "stage-2"
+    "stage-3"
   ],
-  "plugins": ["transform-runtime"],
+  "plugins": ["transform-runtime","transform-async-to-generator"],
   "comments": false,
   "env": {
     "test": {

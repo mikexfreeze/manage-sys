@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-10">
     <!-- <span class="demonstration">默认</span> -->
     <el-date-picker
       v-model="value1"

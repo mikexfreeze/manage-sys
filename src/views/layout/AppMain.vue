@@ -1,16 +1,14 @@
 <template>
-    <section class="app-main" style="min-height: 100%" >
+    <section class="app-main">
         <el-tabs v-model="curRouteName" type="card" @edit="handleTabsEdit" @tab-click="handleClick"
-                 class="mt-10" style="margin-bottom: -10px">
+                 class="mt-10">
             <el-tab-pane class="tabs"
                          :key="item.name"
                          v-for="(item, index) in reactTabs.tabs"
                          :label="item.name"
                          :name="item.name"
                          :closable="item.name == '首页' ? false : true"
-                         :path="item.path"
-
-            >
+                         :path="item.path">
                 <div slot="label" :path="item.path" class="h100 l-block">
                     <span>{{item.name}}</span>
                 </div>
@@ -105,6 +103,8 @@
     }
 </script>
 
-<style scoped>
-
+<style>
+    .el-tabs__header{
+        margin-bottom: 0;
+    }
 </style>

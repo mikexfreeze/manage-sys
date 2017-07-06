@@ -12,7 +12,7 @@ export function GetUserList(page) {
     }
   }
   return fetch({
-    url: process.env.BASE_API + '/uaa/api/users',
+    url: process.env.BASE_API + '/uaa/api/activatedUsers',
     method: 'get',
     params: params
   }).then(function (result) {
@@ -21,6 +21,7 @@ export function GetUserList(page) {
     return result
   })
 }
+
 // 删除用户
 export function DeleteUsers(login) {
   return fetch({
@@ -53,6 +54,18 @@ export function GetUsers(login) {
     method: 'get',
   }).then(function (result) {
     console.log("得到用户信息接口 返回信息")
+    console.log(result)
+    return result
+  })
+}
+//更新用户的角色信息
+export function SetUserRoles(login, data){
+  return fetch({
+    url:process.env.BASE_API + '/uaa/api/v2/user_roles/'+ login,
+    method: 'put',
+    data: data
+  }).then(function (result) {
+    console.log("更新用户角色信息 返回信息");
     console.log(result)
     return result
   })

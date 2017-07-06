@@ -1,5 +1,5 @@
 <template>
-	<el-tree :data="data" :props="defaultProps" :load="loadNode" @node-click="handleNodeClick"></el-tree>	
+	<el-tree class="mt-10" :data="data" :props="defaultProps" :load="loadNode" @node-click="handleNodeClick"></el-tree>
 </template>
 
 <script>

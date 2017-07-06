@@ -7,10 +7,8 @@ import Layout from '../views/layout/Layout';
 const PermissionTest = resolve => require(['../views/permission-test/index'], resolve);
 
 /* active*/
-const activeMsg = resolve => import('../views/active/activeMsg/activeMsg.vue').then(function (result) {
-    return result
-});
-// const activeMsg = resolve => require(['../views/active/activeMsg'], resolve);
+
+const activeMsg = resolve => require(['../views/active/activeMsg/activeMsg.vue'], resolve);
 const activePublic = resolve => require(['../views/active/activePublic.vue'], resolve);
 const packageTable = resolve => require(['../views/active/package-table/packageTable.vue'], resolve);
 
@@ -40,7 +38,7 @@ const Roles = resolve => require(['../views/roles/roles.vue'], resolve);
 const helpDocument = resolve => require(['../views/help-document/helpDocument.vue'], resolve);
 const readmeDocument = resolve => require(['../views/help-document/readme.vue'], resolve);
 const tableDocument = resolve => require(['../views/help-document/table.vue'], resolve);
-
+const catalogDocument = resolve => require(['../views/help-document/catalog.vue'], resolve);
 
 export default [
     {
@@ -90,7 +88,8 @@ export default [
         children: [//子路由
             {path: 'help',component: helpDocument,name: '使用教程',},
             {path: 'table-help',component: tableDocument,name: '表格文档',},
-            {path: 'readme',component: readmeDocument,name: 'readme',}
+            {path: 'readme',component: readmeDocument,name: 'readme',},
+            {path: 'catalog',component: catalogDocument,name: '目录文档',}
         ]
     },{
         path: '/permission-test',//路径

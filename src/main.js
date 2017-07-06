@@ -20,7 +20,7 @@ import permission from 'store/permission';
 import * as filters from './filters'; // 全局vue filter
 Vue.config.productionTip = false
 Vue.use(ElementUI)
-
+require('babel-core/register');
 // register global utility filters.
 Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key])

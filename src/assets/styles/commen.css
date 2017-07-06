@@ -1,86 +1,119 @@
-html,body{
-	margin:0;padding:0;height:100%;
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
-/*common css*/
-.mt-10{margin-top: 10px}
-.h100{height: 100%}
-.l-block{display: inline-block}
 
-#content,.cont-row,.nav-left,.cont-right{
-	height:100%;
+/*common css*/
+.mt-10 {
+    margin-top: 10px
 }
-.nav-left{
-	background-color:#324157;
+
+.h100 {
+    height: 100%
 }
-.cont-right{
-	overflow-y:auto;
-	padding:10px;
+
+.l-block {
+    display: inline-block
 }
-.el-menu-demo{
-  color:#FFF;
-  background-color:#1f2d3d;
+
+#content, .cont-row, .nav-left, .cont-right {
+    height: 100%;
 }
-.el-menu--horizontal .el-menu-item,.el-menu--horizontal .el-submenu{
-  float:right;
+
+.nav-left {
+    background-color: #324157;
 }
-.el-menu-item, .el-submenu__title{
-  height:45px;
-  line-height: 45px;
+
+.cont-right {
+    overflow-y: auto;
+    padding: 10px;
 }
+
+.el-menu-demo {
+    color: #FFF;
+    background-color: #1f2d3d;
+}
+
+.el-menu--horizontal .el-menu-item, .el-menu--horizontal .el-submenu {
+    float: right;
+}
+
+.el-menu-item, .el-submenu__title {
+    height: 45px;
+    line-height: 45px;
+}
+
 .el-submenu .el-menu-item {
-    height:32px;
-    line-height:32px;
-    padding: 0 10px;font-size:12px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    font-size: 12px;
 }
-.el-menu-item-group__title{
-	padding-top:5px;
+
+.el-menu-item-group__title {
+    padding-top: 5px;
 }
-.app-wrapper .sidebar-wrapper{
+
+.app-wrapper .sidebar-wrapper {
     width: 180px;
     position: fixed;
     top: 60px;
     bottom: 0;
     left: 0;
-    background-color:#324157;
+    background-color: #324157;
     z-index: 1001;
     overflow-x: hidden;
     transition: all .28s ease-out;
 }
-.app-wrapper .main-container{
-        padding: 0 15px;
-    transition: all .28s ease-out;
-    margin-left: 180px;
-    overflow: auto;
-    /* height: 88%; */
-    padding-top: 60px;
-}
+
 .app-wrapper .sidebar-wrapper::-webkit-scrollbar {
     width: 9px;
 }
+
 .app-wrapper .sidebar-wrapper::-webkit-scrollbar-track-piece {
     background: #d3dce6;
 }
-header{
-    position:fixed;width:100%;height:60px;background-color: #1f2d3d;z-index: 2;text-align:right;
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #1f2d3d;
+    z-index: 2;
+    text-align: right;
 }
+
 .app-wrapper .sidebar-wrapper::-webkit-scrollbar-thumb {
     background: #99a9bf;
     border-radius: 20px;
 }
+
 .app-wrapper .sidebar-wrapper::-webkit-scrollbar-button {
     display: none;
 }
-.el-menu{
-  border-radius: 0;
+
+.el-menu {
+    border-radius: 0;
 }
-.mainMap{
-    padding:15px 0;
+
+.mainMap {
+    padding: 15px 0;
     font-size: 14px;
-    border-bottom:solid 1px #ddd;
-    margin-bottom:20px;
+    border-bottom: solid 1px #ddd;
+    margin-bottom: 20px;
 }
-.block{
+
+.block {
     text-align: right;
-    margin-top:10px;
+    margin-top: 10px;
+}
+
+.tabs-fix-container {
+    position: fixed;
+    top: 120px;
+    left: 195px;
+    right: 0;
+    bottom: 0;
 }
     

@@ -45,7 +45,6 @@
                 title="授权编辑"
                 :visible.sync="AuthordialogVisible"
                 v-if="AuthordialogVisible"
-
                 >
             <author-tree :dialogRow="AuthordialogRow" @semit="handleTreeEmit" :femit.sync = "femit"></author-tree>
             <span slot="footer" class="dialog-footer">

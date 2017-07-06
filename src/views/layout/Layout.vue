@@ -35,6 +35,7 @@
         position: relative;
         height: 100%;
         width: 100%;
+        overflow: hidden;
         &.hideSidebar {
             .sidebar-wrapper {
                 transform: translate(-140px, 0);
@@ -67,9 +68,11 @@
             transition: all .28s ease-out;
         }
         .main-container {
-            min-height: 100%;
+            padding: 0 15px;
             transition: all .28s ease-out;
-            margin-left: 180px;
+            overflow: auto;
+            position: fixed;
+            top: 60px;right: 0;bottom: 0;left: 180px;
         }
     }
 </style>
