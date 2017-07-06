@@ -24,6 +24,13 @@ export default{
         },
         handleNodeChange(data){
             console.log(data);
+            console.log(this.$refs.fileTree.data)
+            let tree = this.$refs.fileTree.data;
+            tree.forEach(function (val, n) {
+                if(val.$treeNode == data.$treeNode){
+                    tree[n]
+                }
+            })
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="tabs-fix-container">
-        <el-tree :data="catalogData" :props="defaultProps" @current-change="handleNodeChange" highlight-current></el-tree>
+        <el-tree :data="catalogData" ref="fileTree" :props="defaultProps" @current-change="handleNodeChange" highlight-current></el-tree>
         <div class="main-content">
             <router-view></router-view>
         </div>

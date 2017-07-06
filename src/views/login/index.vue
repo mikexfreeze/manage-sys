@@ -1,14 +1,15 @@
 <template>
   <div class="login-container">
     <img class="sysLogo" src="../../assets/logo.png" alt="">
-    <h4 class="systemTitle" style="">联蔚DMCS微服务开发框架</h4>
+    <!-- <h4 class="systemTitle" style="">联蔚DMCS微服务开发框架</h4> -->
     <p class="qyInfo">©2017 上海联蔚信息科技有限公司 版权所有</p>
     <el-form autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left"
              label-width="0px"
              class="card-box login-form">
       <!-- <div class="rightBg"></div> -->
       <div class="rightFroms">
-        <h3 class="title">系统登录</h3>
+        <h3 class="title">联蔚DMCS微服务开发框架</h3>
+        <p class="enTitle">Connext Micro-service Framework</p>
       <el-form-item prop="email">
 
         <span class="svg-container"><i class="iconfont icon-touxiang"></i>
@@ -153,7 +154,7 @@
 <style rel="stylesheet/scss" lang="scss">
   @import "src/assets/styles/mixin.scss";
   body{
-    overflow:hidden;
+    overflow-x:hidden;
   }
   .tips {
     font-size: 14px;
@@ -167,7 +168,8 @@
     background:url('../../assets/login_bg.png');
     background-repeat:no-repeat;
     background-position: left center;
-    background-size:80%;
+    
+    background-size:cover;
     position:absolute;
     top:50px;bottom:50px;
     height:auto;
@@ -181,7 +183,6 @@
       -webkit-appearance: none;
       border-radius: 0px;
       padding: 12px 5px 12px 15px;
-      color: #eeeeee;
       height: 40px;
     }
     .el-input {
@@ -195,14 +196,18 @@
     }
 
     .title {
-      font-size: 26px;
-      font-weight: 400;
+      
+      font-size: 18px;
       color: #eeeeee;
-      margin: 0px auto 40px auto;
+      
+      margin: 0px auto 5px auto;
       text-align: center;
       font-weight: bold;
     }
-
+    .enTitle{
+      font-size:14px;margin-top:0;margin-bottom:20px;color:#fff;
+          font-family: Arial;
+    }
     .login-form {
       position: absolute;
       top: 0;
@@ -254,7 +259,8 @@
       left:-5px;
       border-radius:0;
       width:160px;
-      bottom:20px;
+      
+      bottom:10px;
       background-color:#20a1ff;
       transform: skew(10deg);
     }

@@ -71,7 +71,7 @@
             padding: 0 15px;
             transition: all .28s ease-out;
             overflow: auto;
-            position: fixed;
+            position: absolute;
             top: 60px;right: 0;bottom: 0;left: 180px;
         }
     }
