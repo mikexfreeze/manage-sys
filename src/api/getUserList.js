@@ -12,7 +12,7 @@ export function GetUserList(page) {
     }
   }
   return fetch({
-    url: process.env.BASE_API + '/uaa/api/activatedUsers',
+    url: '/uaa/api/activatedUsers',
     method: 'get',
     params: params
   }).then(function (result) {
@@ -25,7 +25,7 @@ export function GetUserList(page) {
 // 删除用户
 export function DeleteUsers(login) {
   return fetch({
-    url: process.env.BASE_API + '/uaa/api/users/'+ login,
+    url: '/uaa/api/users/'+ login,
     method: 'delete',
   }).then(function (result) {
     console.log("删除用户信息接口 返回信息")
@@ -37,7 +37,7 @@ export function DeleteUsers(login) {
 // 添加新用户
 export function CreateUser(data) {
   return fetch({
-    url: process.env.BASE_API + '/uaa/api/users',
+    url: '/uaa/api/users',
     method: 'post',
     data: data
   }).then(function (result) {
@@ -50,7 +50,7 @@ export function CreateUser(data) {
 // 按照用户名查询用户信息
 export function GetUsers(login) {
   return fetch({
-    url: process.env.BASE_API + '/uaa/api/users/'+ login,
+    url: '/uaa/api/users/'+ login,
     method: 'get',
   }).then(function (result) {
     console.log("得到用户信息接口 返回信息")
@@ -61,7 +61,7 @@ export function GetUsers(login) {
 //更新用户的角色信息
 export function SetUserRoles(login, data){
   return fetch({
-    url:process.env.BASE_API + '/uaa/api/v2/user_roles/'+ login,
+    url:'/uaa/api/v2/user_roles/'+ login,
     method: 'put',
     data: data
   }).then(function (result) {

@@ -4,6 +4,15 @@
         <breadcrumb></breadcrumb>
         <!--操作区-->
         <div class="filter-container">
+            <el-input  id="searchBox" style="width: 150px;" placeholder="请输入搜索内容"
+                        @keyup.enter.native="onSearch"></el-input>
+            <el-select id="activityType" class="filter-item" v-model="activityType"
+                       style="width: 120px;position: relative;top: 4px;">
+                <el-option v-for="item in  actTypeOptions" :key="item.key" :label="item.display_name"
+                           :value="item.display_name">
+                </el-option>
+            </el-select>
+            <el-button type="primary" icon="search" @click="onSearch">搜索</el-button>
             <el-button type="primary" icon="plus" @click="onAdd" v-authority="'ROLE_ADMIN'">新增</el-button>
             <el-button type="primary" icon="edit" @click="onEdit" v-if="hasAuthority('ROLE_ADMIN')">编辑</el-button>
             <el-button type="danger" icon="delete" @click="onDel" v-if="hasAuthority('ROLE_ADMIN')">删除</el-button>
@@ -22,7 +31,8 @@
                 </el-form-item>
                 <el-form-item label="类型">
                     <el-select class="filter-item" v-model="temp.type" placeholder="请选择">
-                        <el-option v-for="item in  activeTypeOptions" :key="item.key" :label="item.display_name" :value="item.display_name">
+                        <el-option v-for="item in  activeTypeOptions" :key="item.key" :label="item.display_name"
+                                   :value="item.display_name">
                         </el-option>
                     </el-select>
                 </el-form-item>

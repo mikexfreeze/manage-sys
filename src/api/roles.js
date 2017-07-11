@@ -12,7 +12,7 @@ export function GetRolesList(page) {
         }
     }
     return fetch({
-        url: process.env.BASE_API + '/uaa/api/roles',
+        url: '/uaa/api/roles',
         method: 'get',
         params: params
     }).then(function (result) {
@@ -24,7 +24,7 @@ export function GetRolesList(page) {
 
 export function GetRole(roleId) {
     return fetch({
-        url: process.env.BASE_API + '/uaa/api/roles/' + roleId,
+        url: '/uaa/api/roles/' + roleId,
         method: 'get',
     }).then(function (result) {
         console.log("get role API")
@@ -35,7 +35,7 @@ export function GetRole(roleId) {
 
 export function SetRoleAuthorities(roleId, data) {
     return fetch({
-        url: process.env.BASE_API + '/uaa/api/roleAuthority/' + roleId,
+        url: '/uaa/api/roleAuthority/' + roleId,
         method: 'put',
         data:data
     }).then(function (result) {
@@ -48,7 +48,7 @@ export function SetRoleAuthorities(roleId, data) {
 // 创建角色
 export function CreateRole(data) {
   return fetch({
-    url: process.env.BASE_API + '/uaa/api/roles',
+    url: '/uaa/api/roles',
     method: 'post',
     data:data
   }).then(function (result) {
@@ -61,7 +61,7 @@ export function CreateRole(data) {
 // 删除角色 根据ID
 export function DeleteRole(id) {
   return fetch({
-    url: process.env.BASE_API + '/uaa/api/roles/' + id,
+    url: '/uaa/api/roles/' + id,
     method: 'delete',
   }).then(function (result) {
     console.log("delete role API")
@@ -73,7 +73,7 @@ export function DeleteRole(id) {
 // 编辑角色信息
 export function UpdateRole(data) {
   return fetch({
-    url: process.env.BASE_API +'/uaa/api/roles',
+    url: '/uaa/api/roles',
     method: "put",
     data: data,
   }).then(function (result) {

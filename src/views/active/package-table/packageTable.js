@@ -12,7 +12,12 @@ import editor from './components/editor.vue';
 
 const activeTypeOptions = [
     { key: 'FD', display_name: '技术分享' },
-    { key: 'FE', display_name: '招聘会' },
+    { key: 'FE', display_name: '招聘会' }
+];
+const actTypeOptions = [
+    { key: 'AD', display_name: '技术分享' },
+    { key: 'AE', display_name: '招聘会' },
+    { key: 'AG', display_name: '全部'}
 ];
 
 //此部分将来抽出
@@ -46,10 +51,10 @@ export default {
                     return time.getTime() < Date.now() - 8.64e7;
                 }
             },
-
             totalPage:10,
-
             formData: [],
+            actTypeOptions,
+            activityType: ''
         }
     },
     components: {
@@ -117,6 +122,59 @@ export default {
             $.extend(this.temp, selectionData[0])
             this.dialogStatus = 'update';
             this.dialogFormVisible = true;
+        },
+        onSearch(){
+            // 获取输入框的内容
+            let res = $('#searchBox >input').val();
+            // 获取选择的活动类型  this.temp.type
+            // console.log(this.activityType);
+            let comRes ;
+            // 新数组，存放搜索的数据
+            let newFormData = [];
+            let size = res.length;
+            // console.log(res);
+            // 如果2个输入都为空
+            if( (res.length == 0) && (this.activityType === '')){
+                Message({
+                    type: 'info',
+                    message: '请输入搜索内容'
+                });
+                return
+            }
+            if(res.length != 0){
+                for(var i=0; i<this.formData.length; i++){
+                    for(var j=0; j<=this.formData[i].name.length - size+1; j++){
+                        comRes = this.formData[i].name.substring(j, j+size );
+                        if((this.activityType !== "全部") || (this.activityType !== '')) {
+                            if( (comRes === res) && (this.formData[i].type === this.activityType)){
+                                console.log(this.formData[i].name);
+                                newFormData.push(this.formData[i]);
+                            }
+                        }
+                        if((this.activityType === "全部") || (this.activityType === '')){
+                            if(comRes === res){
+                                // console.log(this.formData[i].name);
+                                newFormData.push(this.formData[i]);
+                            }
+                        }
+                    }
+                }
+                // console.log(newFormData);
+                this.formData = newFormData;
+            }else{
+                // 输入框无内容，搜索全部显示全部
+                if(this.activityType === "全部"){
+                    this.getList(pageParam)
+                }else{
+                    for(var i=0; i<this.formData.length; i++){
+                        if( (this.formData[i].type === this.activityType) ){
+                            // console.log(this.formData[i].name);
+                            newFormData.push(this.formData[i]);
+                        }
+                    }
+                    this.formData = newFormData;
+                }
+            }
         },
         handleCurrentChange(page){
             // console.log("page")

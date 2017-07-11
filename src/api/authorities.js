@@ -12,7 +12,7 @@ export function GetAuthoritiesList(page) {
         }
     }
     return fetch({
-        url: process.env.BASE_API + '/uaa/api/authorities',
+        url: '/uaa/api/authorities',
         method: 'get',
         params: params
     }).then(function (result) {
@@ -24,7 +24,7 @@ export function GetAuthoritiesList(page) {
 
 export function ImplementAuthorities(data) {
   return fetch({
-    url: process.env.BASE_API + '/uaa/api/authorities',
+    url: '/uaa/api/authorities',
     method: 'post',
     data: data
   }).then(function (result) {

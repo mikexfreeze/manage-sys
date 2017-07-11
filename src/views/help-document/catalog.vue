@@ -2,7 +2,9 @@
     <div class="tabs-fix-container">
         <el-tree :data="catalogData" ref="fileTree" :props="defaultProps" @current-change="handleNodeChange" highlight-current></el-tree>
         <div class="main-content">
-            <router-view></router-view>
+            <div id="md-container">
+
+            </div>
         </div>
     </div>
 </template>
@@ -20,6 +22,8 @@
     }
     .main-content{
         padding-left: 266px;
-        left: 0;right: 0;
+        top: 0;left: 0;right: 0;bottom: 0;
+        overflow: auto;
+        max-height: 100%;
     }
 </style>
