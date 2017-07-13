@@ -5,12 +5,17 @@ import fetch from 'utils/fetch';
 
 export function GetList(page) {
     let params;
+
     if(page){
         params = {
             page:page.page - 1,
-            size: page.size
+            size: page.size,
+            name: page.name,
+            type: page.type
         }
     }
+
+
     return fetch({
         url: '/stuff/api/activities',
         method: 'get',
@@ -65,3 +70,5 @@ export function getArticle() {
         method: 'get'
     });
 }
+
+

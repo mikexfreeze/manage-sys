@@ -6,13 +6,18 @@ import moment from 'moment'
 
 import dataTable from './components/table/table.vue'
 import store from 'store'
-import {GetList, CreatActive, UpdateActive, DeleteActive} from 'api/activities'
+import {GetList, CreatActive, UpdateActive, DeleteActive, SearchActive} from 'api/activities'
 import { Message } from 'element-ui';
 import editor from './components/editor.vue';
 
 const activeTypeOptions = [
     { key: 'FD', display_name: '技术分享' },
-    { key: 'FE', display_name: '招聘会' },
+    { key: 'FE', display_name: '招聘会' }
+];
+const actTypeOptions = [
+    { key: 'AD', display_name: '技术分享' },
+    { key: 'AE', display_name: '招聘会' },
+    { key: 'AG', display_name: '全部'}
 ];
 
 //此部分将来抽出
@@ -38,6 +43,10 @@ export default {
             },
             dialogStatus:'create',
             dialogFormVisible: false,
+            searchVal: {
+                inputRes: '',
+                activityType: '全部'
+            },
             temp: tempInit(),
             activeTypeOptions,
             //日期选择限制
@@ -46,10 +55,10 @@ export default {
                     return time.getTime() < Date.now() - 8.64e7;
                 }
             },
-
             totalPage:10,
-
             formData: [],
+            actTypeOptions,
+            // activityType: ''
         }
     },
     components: {
@@ -117,6 +126,16 @@ export default {
             $.extend(this.temp, selectionData[0])
             this.dialogStatus = 'update';
             this.dialogFormVisible = true;
+        },
+        onSearch(){
+            pageParam.name = this.searchVal.inputRes;
+            if( this.searchVal.activityType !== "全部") {
+                pageParam.type = this.searchVal.activityType;
+            }
+            else{
+                pageParam.type = "";
+            }
+            this.getList(pageParam)
         },
         handleCurrentChange(page){
             // console.log("page")
