@@ -40,7 +40,10 @@ const readmeDocument = resolve => require(['../views/help-document/readme.vue'],
 const tableDocument = resolve => require(['../views/help-document/table.vue'], resolve);
 const catalogDocument = resolve => require(['../views/help-document/catalog.vue'], resolve);
 
-export default [
+
+
+
+ let customRoute = [
     {
         path: '/account',
         component: Layout,
@@ -64,7 +67,8 @@ export default [
             {path: 'packageTable', component: packageTable, name: '活动管理'},
             // {path: 'activePublic', component: activePublic, name: '活动发布'}
         ]
-    }, {
+    },
+    {
         path: '/common',
         component: Layout,
         redirect: '/common/cButton',
@@ -141,3 +145,5 @@ export default [
     // },
 
 ]
+
+export default customRoute

@@ -127,14 +127,12 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss">
-    @import "src/styles/mixin.scss";
 
     .reset-container {
         input:-webkit-autofill {
             -webkit-box-shadow: 0 0 0px 1000px #293444 inset !important;
             -webkit-text-fill-color: #3E3E3E !important;
          }
-        @include relative;
         height: 100vh;
         background-color: #324057;
         .back-icon {

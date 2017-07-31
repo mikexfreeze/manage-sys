@@ -13,8 +13,8 @@
             </el-select>
             <el-button type="primary" icon="search" @click="onSearch">搜索</el-button>
             <el-button type="primary" icon="plus" @click="onAdd" v-authority="'ROLE_ADMIN'">新增</el-button>
-            <el-button type="primary" icon="edit" @click="onEdit" v-if="hasAuthority('ROLE_ADMIN')">编辑</el-button>
-            <el-button type="danger" icon="delete" @click="onDel" v-if="hasAuthority('ROLE_ADMIN')">删除</el-button>
+            <el-button type="primary" icon="edit" @click="onEdit" v-authority="'ROLE_ADMIN'">编辑</el-button>
+            <el-button type="danger" icon="delete" @click="onDel" v-authority="'ROLE_ADMIN'">删除</el-button>
         </div>
         <!--展示区-->
         <dataTable :tableData ="formData" v-on:selectionChange="handleSelectionChange" />

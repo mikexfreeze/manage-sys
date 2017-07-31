@@ -30,7 +30,6 @@ let pageParam = {
 let selectionData = []
 
 export default {
-    hasAuthority:this.hasAuthority,
     created(){
         this.getList(pageParam);
     },

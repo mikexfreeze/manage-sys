@@ -20,31 +20,27 @@ const dashboard = resolve => require(['../views/dashboard/index.vue'], resolve);
 const Err404 = resolve => require(['../views/error/404'], resolve);
 const Err401 = resolve => require(['../views/error/401'], resolve);
 
-
-
 import customRoute from './customRoute'
+let routes = [
+    {path: '/register', component: Register, hidden: true},
+    {path: '/login', component: Login, hidden: true},
 
+    {path: '/404', component: Err404, hidden: true},
+    {path: '/401', component: Err401, hidden: true},
+    {path: '*', redirect: '/404', hidden: true},
+
+    {
+        path: '/',
+        component: Layout,
+        redirect: '/dashboard',
+        name: '首页',
+        hidden: true,
+        children: [{path: 'dashboard', component: dashboard}]
+    }
+
+].concat(customRoute)
 export default new Router({
-    routes: [
-        {path: '/register', component: Register, hidden: true},
-        {path: '/login', component: Login, hidden: true},
-
-        {path: '/404', component: Err404, hidden: true},
-        {path: '/401', component: Err401, hidden: true},
-        {path: '*', redirect: '/404', hidden: true},
-
-        {
-            path: '/',
-            component: Layout,
-            redirect: '/dashboard',
-            name: '首页',
-            hidden: true,
-            children: [{path: 'dashboard', component: dashboard}]
-        }
-
-
-
-    ].concat(customRoute)
+    routes: routes
 })
 
 //全局组件

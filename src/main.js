@@ -15,6 +15,7 @@ import ElementUI from 'element-ui';
 
 import App from './App'
 import router from './router';
+
 import store from './store';
 import permission from 'store/permission';
 import * as filters from './filters'; // 全局vue filter
@@ -104,6 +105,7 @@ const app = new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
 
 //刷新浏览器时重新定向到首页
 // router.push({path:'/'})
