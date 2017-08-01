@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\views\account\assignRoleTable.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/views/account/</a> assignRoleTable.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/16</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+    &lt;div&gt;
+        &lt;!--数据表格--&gt;
+        &lt;el-table :data="tableData" border stripe style="width: 100%" @selection-change="handleSelectionChange"&gt;
+            &lt;!--&lt;el-table-column align="center" label="ID" width="65"&gt;--&gt;
+            &lt;!--&lt;template scope="scope"&gt;--&gt;
+            &lt;!--&lt;span&gt;{{scope.row.id}}&lt;/span&gt;--&gt;
+            &lt;!--&lt;/template&gt;--&gt;
+            &lt;!--&lt;/el-table-column&gt;--&gt;
+            &lt;el-table-column prop="login" label="用户名"&gt;
+                &lt;template scope="scope"&gt;
+                    &lt;span class="link-type"&gt;{{scope.row.login}}&lt;/span&gt;
+                &lt;/template&gt;
+            &lt;/el-table-column&gt;
+            &lt;el-table-column prop="email" label="邮箱"&gt;
+            &lt;/el-table-column&gt;
+            &lt;!--&lt;el-table-column prop="createdBy" label="创建人"&gt;&lt;/el-table-column&gt;--&gt;
+            &lt;!--&lt;el-table-column prop="createdDate" label="创建时间"&gt;--&gt;
+            &lt;!--&lt;template scope="scope"&gt;--&gt;
+            &lt;!--&lt;span class="link-type"&gt;{{scope.row.createdDate | parseTime('{y}-{m}-{d} {h}:{i}')}}&lt;/span&gt;--&gt;
+            &lt;!--&lt;/template&gt;--&gt;
+            &lt;!--&lt;/el-table-column&gt;--&gt;
+            &lt;!--&lt;el-table-column prop="lastModifiedBy" label="上次修改人"&gt;&lt;/el-table-column&gt;--&gt;
+            &lt;el-table-column prop="type" label="操作" align="center" width="200"&gt;
+                &lt;template scope="scope"&gt;
+                    &lt;el-button type="primary" size="small" @click="assignRole(scope.row)"
+                               v-if="hasAuthority('ROLE_ADMIN')"&gt;
+                        赋予角色
+                    &lt;/el-button&gt;
+                    &lt;el-button type="danger" size="small" @click="delUsers(scope)"
+                               v-if="hasAuthority('ROLE_ADMIN')"&gt;
+                        删除
+                    &lt;/el-button&gt;
+                &lt;/template&gt;
+            &lt;/el-table-column&gt;
+        &lt;/el-table&gt;
+        &lt;!--赋予角色--&gt;
+        &lt;el-dialog title="赋予角色" v-if="RoledialogVisible" :visible.sync="RoledialogVisible"&gt;
+            &lt;role-table :roletableData="roleData" :dialogRow="RoledialogRow"
+                        @semit="handleTableEmit" :femit.sync = "femit"&gt;&lt;/role-table&gt;
+            &lt;div slot="footer" class="dialog-footer"&gt;
+                &lt;el-button @click="RoledialogVisible = false"&gt;取消&lt;/el-button&gt;
+                &lt;el-button type="primary" @click="femit.enterBtn = !femit.enterBtn"&gt;确定&lt;/el-button&gt;
+            &lt;/div&gt;
+        &lt;/el-dialog&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+&nbsp;
+    let pageParam = {
+        page: 1,
+        size: 10
+    }
+&nbsp;
+    import {GetUserList, GetUsers} from 'api/getUserList'
+    import {DeleteUsers, CreateUser} from 'api/getUserList'
+    import {GetRolesList} from 'api/roles'
+    import roleTable from './assignRoleDialog.vue'
+&nbsp;
+    export default{
+        props: ['tableData'],
+        data(){
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                roleData: [],
+                RoledialogRow: {},
+                RoledialogVisible: false,
+                multipleSelection: [],
+                femit:{enterBtn:false}
+            }
+        },
+        created(){
+<span class="cstat-no" title="statement not covered" >            this.getList(pagePara</span>m);
+        },
+        methods: {
+            handleSelectionChange(val){
+<span class="cstat-no" title="statement not covered" >                this.multipleSelection = v</span>al;
+<span class="cstat-no" title="statement not covered" >                this.$emit('selectionChange', v</span>al)
+            },
+            // 删除用户提示及删除功能
+            delUsers(scope){
+<span class="cstat-no" title="statement not covered" >                this.ConfirmBox().then(()<span class="fstat-no" title="function not covered" > =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >                    DeleteUsers(scope.row.login)</span>
+                        .then(()<span class="fstat-no" title="function not covered" > =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                            this.tableData.splice(scope.$index, </span>1);
+<span class="cstat-no" title="statement not covered" >                            this.$message({</span>
+                                type: 'success',
+                                message: '删除成功'
+                            });
+                        });
+                }, ()<span class="fstat-no" title="function not covered" > =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    this.$message({</span>
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                })
+            },
+            //赋予角色按钮
+            assignRole(row){
+<span class="cstat-no" title="statement not covered" >                this.RoledialogVisible = tr</span>ue;
+<span class="cstat-no" title="statement not covered" >                this.RoledialogRow = r</span>ow;
+            },
+            handleTableEmit(){
+<span class="cstat-no" title="statement not covered" >                this.RoledialogVisible = fal</span>se;
+<span class="cstat-no" title="statement not covered" >                this.$emit('ssemit</span>');
+            },
+            //显示数据
+            getList(pageParam){
+<span class="cstat-no" title="statement not covered" >                GetRolesList(pageParam).then((response)<span class="fstat-no" title="function not covered" > =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >                    this.roleData = response.da</span>ta;
+                })
+            }
+        },
+        components: {
+            roleTable
+        }
+    }
+&lt;/script&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 01 2017 09:52:54 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

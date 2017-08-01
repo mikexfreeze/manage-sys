@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\router\index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/router/</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.94% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>27/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>27/27</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Vue from 'vue'
+import Router from 'vue-router'
+import Hello from '@/components/Hello'
+&nbsp;
+Vue.use(Router)
+&nbsp;
+/* layout*/
+import Layout from '../views/layout/Layout';
+&nbsp;
+/* login*/
+import Login from '../views/login';
+&nbsp;
+/*register*/
+import Register from '../views/register';
+&nbsp;
+// dashboard
+const dashboard = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/dashboard/index.vue'], resolve);</span></span>
+&nbsp;
+/* error page*/
+const Err404 = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/error/404'], resolve);</span></span>
+const Err401 = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/error/401'], resolve);</span></span>
+&nbsp;
+/* permission */
+const PermissionTest = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/permission-test/index'], resolve);</span></span>
+&nbsp;
+/* active*/
+&nbsp;
+const activeMsg = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/active/activeMsg/activeMsg.vue'], resolve);</span></span>
+const activePublic = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/active/activePublic.vue'], resolve);</span></span>
+const packageTable = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/active/package-table/packageTable.vue'], resolve);</span></span>
+&nbsp;
+//公共组件
+const cButton = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/common/cButton.vue'], resolve);</span></span>
+const cInput = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/common/cInput.vue'], resolve);</span></span>
+const cSelect = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/common/cSelect.vue'], resolve);</span></span>
+const cDate = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/common/cDate.vue'], resolve);</span></span>
+const cTree = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/common/cTree.vue'], resolve);</span></span>
+const charts = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/common/echarts.vue'], resolve);</span></span>
+const upload = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['views/common/upLoad.vue'], resolve)</span></span>
+const tab = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['src/views/router-show/tab-page/page1.vue'], resolve)</span></span>
+&nbsp;
+// 演示页面
+const list = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/demo/list/list.vue'], resolve);</span></span>
+&nbsp;
+// 路由展示
+const tabpage = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/router-show/tab-page/tabPage.vue'], resolve);</span></span>
+&nbsp;
+//用户管理
+const account = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/account/userManager.vue'], resolve);</span></span>
+const Permission = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/permission/permission.vue'], resolve);</span></span>
+const Roles = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/roles/roles.vue'], resolve);</span></span>
+&nbsp;
+&nbsp;
+//说明文档
+const helpDocument = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/help-document/helpDocument.vue'], resolve);</span></span>
+const readmeDocument = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/help-document/readme.vue'], resolve);</span></span>
+const tableDocument = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/help-document/table.vue'], resolve);</span></span>
+const catalogDocument = resolve =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require(['../views/help-document/catalog.vue'], resolve);</span></span>
+&nbsp;
+// import customRoute from './customRoute'
+&nbsp;
+export default new Router({
+    routes: [
+        {path: '/register', component: Register, hidden: true},
+        {path: '/login', component: Login, hidden: true},
+&nbsp;
+        {path: '/404', component: Err404, hidden: true},
+        {path: '/401', component: Err401, hidden: true},
+        {path: '*', redirect: '/404', hidden: true},
+&nbsp;
+        {
+            path: '/',
+            component: Layout,
+            redirect: '/dashboard',
+            name: '首页',
+            hidden: true,
+            children: [{path: 'dashboard', component: dashboard}]
+        },
+        {
+            path: '/account',
+            component: Layout,
+            redirect: '/account/userManager',
+            name: '用户与权限',
+            icon: 'yonghuguanli',
+            children: [
+                {path: 'userManager', component: account, name: '用户管理'},
+                {path: 'permission', component: Permission, name: '权限管理'},
+                {path: 'roles', component: Roles, name: '角色管理'}
+            ]
+        },
+        {
+            path: '/active',
+            component: Layout,
+            redirect: '/active/index',
+            name: '活动Demo',
+            icon: 'mili_huodong',
+            children: [
+                // {path: 'activeMsg', component: activeMsg, name: '活动管理'},
+                {path: 'packageTable', component: packageTable, name: '活动管理'},
+                // {path: 'activePublic', component: activePublic, name: '活动发布'}
+            ]
+        }, {
+            path: '/common',
+            component: Layout,
+            redirect: '/common/cButton',
+            name: '公共组件',
+            icon: 'zujian',
+            children: [
+                {path: 'cButton', component: cButton, name: '按钮'},
+                {path: 'cInput', component: cInput, name: '输入框'},
+                {path: 'cSelect', component: cSelect, name: 'select选择器'},
+                {path: 'cDate', component: cDate, name: '日期选择'},
+                {path: 'cTree', component: cTree, name: '树形控件'},
+                {path: 'echarts', component: charts, name: '图表'},
+                {path: 'upload', component: upload, name: '上传控件'}
+            ]
+        }, {
+            path: '/help',//路径
+            component: Layout,//layout模板组件
+            redirect: '/help/readme',//重新定向到子路由
+            name: '帮助文档',//路由名称
+            icon: 'wendang',
+            children: [//子路由
+                {path: 'help', component: helpDocument, name: '使用教程',},
+                {path: 'table-help', component: tableDocument, name: '表格文档',},
+                {path: 'readme', component: readmeDocument, name: 'readme',},
+                {path: 'catalog', component: catalogDocument, name: '目录文档',}
+            ]
+        }, {
+            path: '/permission-test',//路径
+            component: Layout,//layout模板组件
+            redirect: '/permission-test/index',//重新定向到子路由
+            name: '权限测试',//路由名称
+            icon: 'quanxian',
+            meta: {role: ['ROLE_ADMIN']}, //页面需要的权限
+            // noDropdown: true,
+            children: [//子路由
+                {
+                    path: 'index',
+                    component: PermissionTest,
+                    name: '当前用户权限',
+                    meta: {role: ['ROLE_ADMIN']}  //页面需要的权限
+                }]
+        }
+&nbsp;
+&nbsp;
+    ]
+})
+&nbsp;
+//全局组件
+import breadcrumb from 'components/breadcrumb/breadcrumb.vue'
+Vue.component('breadcrumb', breadcrumb)
+&nbsp;
+import pagination from 'components/pagination/pagination.vue'
+Vue.component('pagination', pagination)
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 01 2017 09:52:54 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

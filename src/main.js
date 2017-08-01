@@ -106,6 +106,6 @@ const app = new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-
+export default app
 //刷新浏览器时重新定向到首页
 // router.push({path:'/'})

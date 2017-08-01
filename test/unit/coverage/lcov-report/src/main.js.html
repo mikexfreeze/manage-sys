@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\main.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> main.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40.63% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">41.94% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/31</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import 'normalize.css/normalize.css';// normalize.css 样式格式化
+import 'element-ui/lib/theme-default/index.css' //element默认样式
+import 'assets/styles/index.scss'; // 全局自定义的css样式
+import 'assets/styles/commen.css';
+import 'assets/iconfont/iconfont'; // iconfont
+import 'components/Icon-svg/index'; // 封装的svg组件
+import './directives'; // 自定义指令
+import 'components'; // 自定义全局组件
+&nbsp;
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import ElementUI from 'element-ui';
+&nbsp;
+import App from './App'
+import router from './router';
+&nbsp;
+import store from './store';
+import permission from 'store/permission';
+import * as filters from './filters'; // 全局vue filter
+Vue.config.productionTip = false
+Vue.use(ElementUI)
+require('babel-core/register');
+// register global utility filters.
+Object.keys(filters).forEach(key =&gt; {
+    Vue.filter(key, filters[key])
+});
+&nbsp;
+const whiteList = ['/login', '/authredirect', '/reset', '/sendpwd','/register'];// 不重定向白名单
+router.beforeEach((to, from, next) =&gt; {
+  // console.log("循环计数")
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (store.getters.token) { // 判断是否有token
+    // console.log("有token")
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    hasUserInfo()</span>
+      .then(function () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        if (to.meta &amp;&amp; to.meta.role) {// 判断即将进入的页面是否需要权限</span>
+<span class="cstat-no" title="statement not covered" >          if (hasPermission(store.getters.roles, to.meta.role)) { // 判断权限</span>
+<span class="cstat-no" title="statement not covered" >            next(); </span>// 有权限
+          } else {
+<span class="cstat-no" title="statement not covered" >            next({ path: '/401', query: { noGoBack: true } }); </span>// 无权限
+          }
+        }else{
+<span class="cstat-no" title="statement not covered" >          next() </span>//不需要权限
+        }
+      },function () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        store.dispatch('FedLogOut').then(() =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >          next({ path: '/login' })</span>
+        });
+        // next('/login'); // 获取用户信息失败重定向到登录页
+      })
+&nbsp;
+&nbsp;
+&nbsp;
+  } else {
+    if (whiteList.indexOf(to.path) !== -1) { // 在免登录白名单，直接进入
+      next()
+    } else {
+      next('/login'); // 否则全部重定向到登录页
+      // NProgress.done(); // 在hash模式下 改变手动改变hash 重定向回来 不会触发afterEach 暂时hack方案 ps：history模式下无问题，可删除该行！
+    }
+  }
+&nbsp;
+});
+&nbsp;
+&nbsp;
+&nbsp;
+// permissiom judge
+function hasPermission(roles, permissionRoles) <span class="fstat-no" title="function not covered" >{</span>
+  // if (roles.indexOf('USER_ADMIN') &gt;= 0) return true; // admin权限 直接通过
+<span class="cstat-no" title="statement not covered" >  return roles.some(role =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >permissionRoles.indexOf(role) &gt;= 0)</span></span></span>
+}
+&nbsp;
+function hasUserInfo()<span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  return new Promise((reslove, reject)=&gt;<span class="fstat-no" title="function not covered" >{</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (store.getters.roles.length &lt; 1) { // 判断当前用户是否已拉取完user_info信息</span>
+<span class="cstat-no" title="statement not covered" >      store.dispatch('GetInfo').then(res =&gt; <span class="fstat-no" title="function not covered" >{ // 拉取user_info</span></span>
+        const roles = <span class="cstat-no" title="statement not covered" >res.data.role;</span>
+        // console.log("获取的用户信息")
+        // console.log(res)
+<span class="cstat-no" title="statement not covered" >        permission.init({ // 初始化权限</span>
+          roles: store.getters.roles,
+          router: router.options.routes
+        })
+<span class="cstat-no" title="statement not covered" >        reslove()</span>
+      },function () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        reject()</span>
+      })
+    }else{
+<span class="cstat-no" title="statement not covered" >      permission.init({ // 初始化权限</span>
+        roles: store.getters.roles,
+        router: router.options.routes
+      })
+      // console.log("有role信息")
+<span class="cstat-no" title="statement not covered" >      reslove()</span>
+    }
+  })
+&nbsp;
+}
+&nbsp;
+const app = new Vue({
+  router,
+  store,
+  render: h =&gt; h(App)
+}).$mount('#app')
+&nbsp;
+export default app
+//刷新浏览器时重新定向到首页
+// router.push({path:'/'})</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 01 2017 09:52:54 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
