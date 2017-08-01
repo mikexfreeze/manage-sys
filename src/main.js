@@ -8,6 +8,7 @@ import 'assets/iconfont/iconfont'; // iconfont
 import 'components/Icon-svg/index'; // 封装的svg组件
 import './directives'; // 自定义指令
 import 'components'; // 自定义全局组件
+import './mock/index.js';  // 该项目所有请求使用mockjs模拟
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'

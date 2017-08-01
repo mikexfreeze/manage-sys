@@ -57,7 +57,7 @@ export default {
             totalPage:10,
             formData: [],
             actTypeOptions,
-            // activityType: ''
+            activityType: ''
         }
     },
     components: {

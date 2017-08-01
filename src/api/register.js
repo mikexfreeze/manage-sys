@@ -5,7 +5,7 @@ export function register(data) {
 
   return axios({
     method: 'post',
-    url: process.env.BASE_API + '/uaa/api/register',
+    url: '/uaa/api/register',
     data: data,
     headers:{
       // 'Content-Type': 'application/x-www-form-urlencoded',
